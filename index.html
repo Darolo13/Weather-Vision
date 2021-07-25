@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <!-------------------------------------- hero ------------------------------------------------------------------->
+
+    <div class="hero bg-primary text-white">
+        <div class="container col-12">
+            <h1 class="display-4">Weather Dashboard <i class="fas fa-cloud-sun"></i> </h1>
+        </div>
+    </div>
+    <div class="row min-vh-100 border border-secondary">
+        <header class="col-12 col-lg-3 d-flex flex-column p-4 p-lg-3 border-none border-secondary">
+            <h1 class="text-left">
+                <span class="d-inline d-lg-none"></span>
+                Search for a city:
+            </h1>
+            <input type="text" name="city" class="p-2" id="searchInput" onclick="rebootInputBtn()"
+                placeholder="Chicago">
+            <br>
+            <button type="button" class="btn" id="citySearch" onclick="searchCityBtn()"> Search </button>
+            <ul id="cityHistory">
+
+            </ul>
+        </header>
+
+        <main class="col-12 col-lg-9 d-flex flex-column border-none border-secondary">
+            <div class="m-3 border border-secondary align-items-left" id="response-container">
+                <h1 class="text-left" id="cityDisplay">
+
+                    <!-------------------------------- city & date display ------------------------------------------------------------->
+                    <span id="current-city-display-span"> Chicago </span> <span id="current-date-display-span"> (10/10/21) </span>
+                </h1>
+                <div class="m-2 row current-city-display">
+                    <img class="col-2" id=current-weather-i src=" ">
+
+                    <!------------------------------- current weather information ---------------------------------------------------------->
+
+                    <ul class="col-6" id=currentWeatherDisplay>
+                        <li>
+                            Temperature: <span id=current-temperature></span>
+                        </li>
+                        <li>
+                            Wind: <span id=current-wind> </span>
+                        </li>
+                        <li>
+                            Humidity: <span id=current-humidity> </span>
+                        </li>
+                        <li>
+                            UV Index: <span id=current-uv-index> </span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <h1 class="text-left"> 5-Day Forecast: </h1>
+            <div class="m-3 row justify-content-around border-none border-secondary">
+                <!---------------------------------------------------- Day 1 -------------------------------------------------------->
+                <div class="col-12 col-md-6 col-xl-2 mb-3 mt-3">
+                    <div class="card">
+                        <h4 class="card-header list-group text-light d-flex align-items-center" id="Day-1">
+
+                        </h4>
+                        <ul class="list-group list-group-flush list-group text-light">
+                            <img id=day-1-ico src=" ">
+                            <li> Temperature: <span id=day-1-temperature></span> </li>
+                            <li> Wind: <span id=day-1-wind></span> </li>
+                            <li> Humidity: <span id=day-1-humidity></span> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!---------------------------------------------------- Day 2 ---------------------------------------------------------->
+                <div class="col-12 col-md-6 col-xl-2 mb-3 mt-3">
+                    <div class="card">
+                        <h4 class="card-header list-group text-light d-flex align-items-center" id="Day-2">
+
+                        </h4>
+                        <ul class="list-group list-group-flush list-group text-light">
+                            <img id=day-2-ico src=" ">
+                            <li> Temperature: <span id=day-2-temperature></span> </li>
+                            <li> Wind: <span id=day-2-wind></span> </li>
+                            <li> Humidity: <span id=day-2-humidity></span> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--------------------------------------------------------- Day 3 ------------------------------------------------------------>
+                <div class="col-12 col-md-6 col-xl-2 mb-3 mt-3">
+                    <div class="card">
+                        <h4 class="card-header list-group text-light d-flex align-items-center" id="Day-3">
+
+                        </h4>
+                        <ul class="list-group list-group-flush list-group text-light">
+                            <img id=day-3-ico src=" ">
+                            <li> Temperature: <span id=day-3-temperature></span> </li>
+                            <li> Wind: <span id=day-3-wind></span> </li>
+                            <li> Humidity: <span id=day-3-humidity></span> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--------------------------------------------- Day 4 ---------------------------------------------------->
+                <div class="col-12 col-md-6 col-xl-2 mb-3 mt-3">
+                    <div class="card">
+                        <h4 class="card-header list-group text-light d-flex align-items-center" id="Day-4">
+
+                        </h4>
+                        <ul class="list-group list-group-flush list-group text-light">
+                            <img id=day-4-ico src=" ">
+                            <li> Temperature: <span id=day-4-temperature></span> </li>
+                            <li> Wind: <span id=day-4-wind></span> </li>
+                            <li> Humidity: <span id=day-4-humidity></span> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!------------------------------------------------ Day 5 --------------------------------------------------------------------------------->
+                <div class="col-12 col-md-6 col-xl-2 mb-3 mt-3">
+                    <div class="card">
+                        <h4 class="card-header list-group text-light d-flex align-items-center" id="Day-5">
+
+                        </h4>
+                        <ul class="list-group list-group-flush list-group text-light">
+                            <img id=day-5-ico src=" ">
+                            <li> Temperature: <span id=day-5-temperature></span> </li>
+                            <li> Wind: <span id=day-5-wind></span> </li>
+                            <li> Humidity: <span id=day-5-humidity></span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
