@@ -1,0 +1,93 @@
+:root {
+  font-family: 'Oswald', sans-serif;
+  --dark: #343a40;
+  --white: whitesmoke;
+  --background: #A9A9A9;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  line-height: 1;
+  padding: 15px;
+}
+
+h4 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  line-height: 1;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.hero {
+  background-image: linear-gradient(to right, rgb(162, 196, 207), rgb(48, 64, 145), rgb(66, 66, 133));
+  text-align: center;
+  background-color: transparent;
+  border-radius: 0;
+  border-bottom: 10px solid var(--dark);
+  padding: 0px;
+}
+
+#response-container{
+  background-color: var(--white);
+  border-radius: 5px;
+  
+}
+
+#cityHistory{
+  margin: 10px;
+  padding-left: 0px;
+  border-top: 3px;
+  border-color: var(--dark);
+  border-style: solid;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+}
+
+#current-weather-i{
+  margin: 0px 18px 18px 18px;
+  padding:0;
+  height:150px;
+  min-width:150px;
+  background-color: var(--white);
+  border-radius: 7px;
+}
+
+#current-weather-i img{
+  border-style: none;
+  border-color: var(--white);
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: rgba(90, 162, 233, 0.6);
+  color: var(--white);
+}
+
+.btn:hover {
+  font-size: 18px;
+  transition: all .3s ease-in-out;
+}
+
+.list-group {
+  background-color: rgb(51, 71, 90);
+}
+
+div.row {
+  margin-right: 0;
+}
