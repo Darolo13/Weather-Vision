@@ -23,7 +23,7 @@ Ready Features:
 
 ## Screenshot
 ### Weather-Vision:
-![Initial-display](./assets/screenshots/)
+![Initial-display](./assets/screenshots/main.png)
 
 ## Project Status
 Project is: _in progress_
