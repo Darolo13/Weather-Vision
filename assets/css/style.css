@@ -59,19 +59,6 @@ li {
   border-bottom-style: none;
 }
 
-#current-weather-i{
-  margin: 0px 18px 18px 18px;
-  padding:0;
-  height:150px;
-  min-width:150px;
-  background-color: var(--white);
-  border-radius: 7px;
-}
-
-#current-weather-i img{
-  border-style: none;
-  border-color: var(--white);
-}
 
 .btn {
   border-radius: 5px;
