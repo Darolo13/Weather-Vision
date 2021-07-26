@@ -1,6 +1,6 @@
 # _Weather-Vision_
 > A simple app that lets you view weather in the city you choose.
-> Live demo [_here_](https://darolo13.github.io/). 
+> Live demo [_here_](https://darolo13.github.io/Weather-Vision/). 
 
 ## Table of Contents
 * [Technologies Used](#technologies-used)
@@ -17,13 +17,16 @@
 
 ## Features
 Ready Features:
-1. ** **
+1. **Show weather**
+- Allows to view the weather in the specific city the you search for.
+2. **Allows to view the forecast 5 days prior to the current date**
 
 
 
 ## Screenshot
 ### Weather-Vision:
 ![Initial-display](./assets/screenshots/main.png)
+![Initial-display](./assets/screenshots/2.png)
 
 ## Project Status
 Project is: _in progress_
@@ -31,10 +34,8 @@ Project is: _in progress_
 
 ## Room for Improvement
 Room for improvement:
-- 
-- 
+- TBD
 
 To do:
--
--
--
+- Add reset buttons
+- Improve design
