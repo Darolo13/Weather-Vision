@@ -39,3 +39,5 @@ Room for improvement:
 To do:
 - Add reset buttons
 - Improve design
+- Add local Storage
+- Add UV index
