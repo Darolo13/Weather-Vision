@@ -5,12 +5,10 @@ citySearch.addEventListener("click", findCity)
 var cityList = {};
 var currentCity = $("#current-city");
 
-var weatherIcon = $('#icon');
 var currentTemperature = $("#current-temperature");
 var currentHumidity = $("#current-humidity");
 var currentWSpeed = $("#current-wind");
 var currentUvIndex = $("#uv");
-var clearHistory = $('#clearBtn');
 
 // day 1
 var day1 = document.querySelector('#Day-1');
@@ -69,19 +67,19 @@ function findCity() {
 
       var city = (response.name);
       console.log(city);
-      currentCity.text(city)
+      currentCity.text(city) 
 
       var temp = (response.main.temp);
       console.log(temp);
-      currentTemperature.text(temp);
+      currentTemperature.text(temp + " °F");
 
       var humid = (response.main.humidity);
       console.log(humid);
-      currentHumidity.text(humid);
+      currentHumidity.text(humid + "%");
 
       var speed = (response.wind.speed);
       console.log(speed);
-      currentWSpeed.text(speed);
+      currentWSpeed.text(speed + " MPH");
 
       // use coordinates to get uv index
       var resultLon = response.coord.lon;
