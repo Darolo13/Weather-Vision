@@ -20,6 +20,7 @@ Ready Features:
 1. **Show weather**
 - Allows to view the weather in the specific city the you search for.
 2. **Allows to view the forecast 5 days following to the current date**
+3. **Allows to view the UV index of the city you search**
 
 
 
@@ -27,6 +28,7 @@ Ready Features:
 ### Weather-Vision:
 ![Initial-display](./assets/screenshots/main.png)
 ![Initial-display](./assets/screenshots/2.png)
+![Initial-display](./assets/screenshots/3.png)
 
 ## Project Status
 Project is: _in progress_
@@ -40,4 +42,3 @@ To do:
 - Add reset buttons
 - Improve design
 - Add local Storage
-- Add UV index
