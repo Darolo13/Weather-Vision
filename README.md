@@ -19,7 +19,7 @@
 Ready Features:
 1. **Show weather**
 - Allows to view the weather in the specific city the you search for.
-2. **Allows to view the forecast 5 days prior to the current date**
+2. **Allows to view the forecast 5 days following to the current date**
 
 
 
@@ -39,3 +39,5 @@ Room for improvement:
 To do:
 - Add reset buttons
 - Improve design
+- Add local Storage
+- Add UV index
