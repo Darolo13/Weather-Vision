@@ -4,6 +4,9 @@ $("#current-date-display-span").html(todayDate);
 citySearch.addEventListener("click", findCity)
 var cityList = {};
 var currentCity = $("#current-city");
+var cityInput = document.querySelector("#search-input");
+var previousSearch = document.querySelector("#city-history")
+var searchList = JSON.parse(localStorage.getItem("city-search-list")) || [];
 
 var currentTemperature = $("#current-temperature");
 var currentHumidity = $("#current-humidity");
@@ -91,8 +94,35 @@ function findCity() {
         .then(function (response) {
           return response.json();
         }).then(function (response) {
-          console.log(response);
-
+          
+          // display current uv index
+          currentUvIndex.text(response.daily[0].uvi);
+          console.log(currentUvIndex)
+          
+          //UV index color indicating (favorable, moderate or severe)
+          switch(Math.floor(response.daily[0].uvi)) {
+            case 0:
+            case 1:
+            case 2:
+              document.querySelector("#uv").style.backgroundColor = "green"
+              document.querySelector("#uv").style.color = "black";
+            break;
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+              document.querySelector("#uv").style.backgroundColor = "orange"
+              document.querySelector("#uv").style.color = "black";
+            break;
+            case 8:
+            case 9:
+            case 10:
+              document.querySelector("#uv").style.backgroundColor = "red"
+              document.querySelector("#uv").style.color = "white";
+            break;
+          } 
+          
            // 5 day forecast (day 1 of 5)
            day1.textContent = (moment().add(1,'day').format("MM/DD/YY"));
            day1Icon.innerHTML = "<img src="+`http://openweathermap.org/img/w/${response.daily[1].weather[0].icon}.png`+' width="50" height="50">'
@@ -129,12 +159,5 @@ function findCity() {
            day5Humid.textContent = ` ${response.daily[5].humidity}%`; 
         })
     })
-
-}
-
-function searchHistory() {
-  var searchTerm = document.getElementById('search-input').value;
-
-
 
 }

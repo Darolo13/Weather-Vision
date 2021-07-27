@@ -78,3 +78,7 @@ li {
 div.row {
   margin-right: 0;
 }
+
+#uv {
+  border-radius: 0.4rem;
+}
